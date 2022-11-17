@@ -426,7 +426,7 @@ namespace set2
 
             int incuibare = 0;
             int max = 0;
-
+            int counter = 0;
             for(int i = 0; i < n; i++)
             {
                 int x = int.Parse(Console.ReadLine());
@@ -437,9 +437,9 @@ namespace set2
                 if (incuibare > max)
                     max = incuibare;
                 if (incuibare < 0)
-                    break;
+                    counter = 1;
             }
-            if(incuibare != 0)
+            if(counter == 1)
                 Console.WriteLine("Secventa nu este corecta");
             else
                 Console.WriteLine($"Secventa este corecta si are nivelul maxim de incuibare {max}");
